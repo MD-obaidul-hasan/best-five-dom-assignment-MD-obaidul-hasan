@@ -5,10 +5,11 @@ let players = [];
 function selectPlayer(data) {
     if (players.length < 5) {
         players.push(data);
-        const h1 = document.createElement('h1');
-        h1.innerText = data.text;
-        selectPlayerSection.appendChild(h1);
-        document.getElementById(data.id).setAttribute("disabled","disabled");
+        const li = document.createElement('li');
+        li.className = 'list-decimal'
+        li.innerText = data.text;
+        selectPlayerSection.appendChild(li);
+        document.getElementById(data.id).setAttribute("disabled", "disabled");
     }
     // else if (players.length < 5) {
     //     console.log(players);
